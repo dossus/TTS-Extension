@@ -1,0 +1,25 @@
+The text-to-speech functionality is handled using the chrome.tts API, which relies on the browser's speech synthesis capabilities.
+
+To see available voices, you can use:
+
+chrome.tts.getVoices(function(voices) {
+  console.log(voices);
+});
+
+Add icons by adding below to manifest.json 
+
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+
+    chrome.tts.speak(selectedText, {
+  rate: 1.0,
+  pitch: 1.0,
+  volume: 1.0,
+  lang: 'en-US',
+  voiceName: 'Google US English'
+});
+
+Google US English
